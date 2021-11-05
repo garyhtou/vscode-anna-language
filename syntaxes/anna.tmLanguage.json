@@ -3,29 +3,43 @@
 	"name": "ANNA",
 	"patterns": [
 		{
+			"include": "#comments"
+		},
+		{
 			"include": "#keywords"
 		},
 		{
-			"include": "#strings"
+			"include": "#labels"
 		}
 	],
 	"repository": {
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.anna",
-				"match": "\\b(if|while|for|return)\\b"
+				"match": "\\b(add|addi|sub|bez|bgz|lli|lui|in|out|sw|lw)\\b"
 			}]
 		},
-		"strings": {
-			"name": "string.quoted.double.anna",
-			"begin": "\"",
-			"end": "\"",
-			"patterns": [
-				{
-					"name": "constant.character.escape.anna",
-					"match": "\\\\."
+		"labels": {
+			"name": "entity.name.selector",
+			"match": "(&)(.+)($|\\s)",
+			"captures": {
+				"1": {
+					"name": "markup.punctuation.label.anna"
+				},
+				"2": {
+					"name": "entity.name.selector.anna"
 				}
-			]
+			}
+		},
+		"comments": {
+			"name": "comment.line.number-sign.anna",
+			"match": "#.*$"
+		},
+		"directive": {
+			"patterns": [{
+				"name": "meta.preprocessor.anna",
+				"match": "\\b(.halt|.fill)\\b"
+			}]
 		}
 	},
 	"scopeName": "source.anna"
