@@ -1,25 +1,34 @@
 {
-    "name": "anna",
-    "displayName": "ANNA",
-    "description": "VS Code Language Support for ANNA Assembly",
-    "version": "0.0.1",
-    "engines": {
-        "vscode": "^1.62.0"
-    },
-    "categories": [
-        "Programming Languages"
-    ],
-    "contributes": {
-        "languages": [{
-            "id": "anna",
-            "aliases": ["ANNA", "anna"],
-            "extensions": [".ac"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "anna",
-            "scopeName": "source.anna",
-            "path": "./syntaxes/anna.tmLanguage.json"
-        }]
-    }
+	"name": "anna",
+	"displayName": "ANNA",
+	"description": "VS Code Language Support for ANNA Assembly",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.62.0"
+	},
+	"categories": [
+		"Programming Languages"
+	],
+	"contributes": {
+		"languages": [
+			{
+				"id": "anna",
+				"aliases": [
+					"ANNA",
+					"anna"
+				],
+				"extensions": [
+					".ac"
+				],
+				"configuration": "./language-configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "anna",
+				"scopeName": "source.anna",
+				"path": "./syntaxes/anna.tmLanguage.json"
+			}
+		]
+	}
 }

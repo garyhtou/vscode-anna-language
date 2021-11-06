@@ -1,5 +1,11 @@
 {
 	"comments": {
 		"lineComment": "#"
+	},
+	"folding": {
+		"markers": {
+			"start": "(^|\\S*)[a-zA-Z0-9_]+:",
+			"end": "((^|\\S*)[a-zA-Z0-9_]+:|bez r0|.halt)"
+		}
 	}
 }
