@@ -10,36 +10,77 @@
 		},
 		{
 			"include": "#labels"
+		},
+		{
+			"include": "#directives"
+		},
+		{
+			"include": "#registers"
+		},
+		{
+			"include": "#immediates"
 		}
 	],
 	"repository": {
 		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.anna",
-				"match": "\\b(add|addi|sub|bez|bgz|lli|lui|in|out|sw|lw)\\b"
-			}]
+			"patterns": [
+				{
+					"name": "keyword.control.anna",
+					"match": "\\b(add|sub|and|or|not|shf|lli|lui|lw|sw|bez|bgz|addi|jalr|in|out)\\b"
+				}
+			]
 		},
 		"labels": {
-			"name": "entity.name.selector",
-			"match": "(&)(.+)($|\\s)",
-			"captures": {
-				"1": {
-					"name": "markup.punctuation.label.anna"
+			"patterns": [
+				{
+					"match": "(&)([a-zA-Z0-9_]+)($|\\s*)",
+					"name": "entity.name.type.anna"
 				},
-				"2": {
-					"name": "entity.name.selector.anna"
+				{
+					"match": "(^|\\s)*([a-zA-Z0-9_]+)(:)\\s*$",
+					"name": "invalid.illegal"
+				},
+				{
+					"match": "(^|\\s*)([a-zA-Z0-9_]+)(:)",
+					"name": "entity.name.type.anna"
 				}
-			}
+			]
 		},
 		"comments": {
 			"name": "comment.line.number-sign.anna",
 			"match": "#.*$"
 		},
-		"directive": {
-			"patterns": [{
-				"name": "meta.preprocessor.anna",
-				"match": "\\b(.halt|.fill)\\b"
-			}]
+		"directives": {
+			"patterns": [
+				{
+					"name": "keyword.control.less",
+					"match": "(.\\b(halt|fill)\\b)"
+				}
+			]
+		},
+		"registers": {
+			"match": "(r[0-7])(\\S|$)?",
+			"captures": {
+				"1": {
+					"name": "support.variable.annna"
+				}
+			}
+		},
+		"immediates": {
+			"patterns": [
+				{
+					"name": "constant.numeric.anna",
+					"match": "0x[a-fA-F0-9]+"
+				},
+				{
+					"name": "invalid.illegal",
+					"match": "0x"
+				},
+				{
+					"name": "constant.numeric.anna",
+					"match": "\\d+"
+				}
+			]
 		}
 	},
 	"scopeName": "source.anna"
