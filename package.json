@@ -1,8 +1,10 @@
 {
 	"name": "anna",
 	"displayName": "ANNA",
-	"description": "VS Code Language Support for ANNA Assembly",
+	"description": "Language support and syntax highlighting for ANNA Assembly",
 	"version": "0.0.1",
+	"repository": "https://github.com/garyhtou/vscode-anna-language",
+	"author": "Gary Tou <gary@garytou.com> (https://garytou.com)",
 	"engines": {
 		"vscode": "^1.62.0"
 	},
