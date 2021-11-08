@@ -1,10 +1,19 @@
 {
 	"name": "anna",
 	"displayName": "ANNA",
-	"description": "Language support and syntax highlighting for ANNA Assembly",
-	"version": "0.0.1",
+	"publisher": "garyhtou",
+	"description": "Language support and syntax highlighting for ANNA Assembly Language",
+	"version": "0.0.2",
 	"repository": "https://github.com/garyhtou/vscode-anna-language",
 	"author": "Gary Tou <gary@garytou.com> (https://garytou.com)",
+	"license": "SEE LICENSE IN LICENSE",
+	"keywords": [
+		"ANNA",
+		"assembly",
+		"language",
+		"Seattle University",
+		"SU"
+	],
 	"engines": {
 		"vscode": "^1.62.0"
 	},
