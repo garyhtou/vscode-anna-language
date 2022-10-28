@@ -26,7 +26,7 @@
 			"patterns": [
 				{
 					"name": "keyword.control.anna",
-					"match": "\\b(add|sub|and|or|not|shf|lli|lui|lw|sw|bez|bgz|addi|jalr|in|out)\\b"
+					"match": "\\b(add|sub|and|or|not|shf|lli|lui|lw|sw|beq|bne|bgt|bge|blt|ble|addi|jalr|in|out)\\b"
 				}
 			]
 		},
@@ -62,7 +62,7 @@
 			"match": "(r[0-7])(\\S|$)?",
 			"captures": {
 				"1": {
-					"name": "support.variable.annna"
+					"name": "support.variable.anna"
 				}
 			}
 		},
