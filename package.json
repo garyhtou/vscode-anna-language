@@ -3,7 +3,7 @@
 	"displayName": "ANNA",
 	"publisher": "garyhtou",
 	"description": "Language support and syntax highlighting for ANNA Assembly Language",
-	"version": "0.0.2",
+	"version": "1.0.0",
 	"repository": "https://github.com/garyhtou/vscode-anna-language",
 	"author": "Gary Tou <gary@garytou.com> (https://garytou.com)",
 	"license": "SEE LICENSE IN LICENSE",
